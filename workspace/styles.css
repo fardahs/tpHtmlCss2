@@ -3,22 +3,33 @@
 
 }
 
+ /*****************SECTION***************************/
 .section {
 	background-image: linear-gradient(to right, #3B7BA7, #3B7BA7 50%, white 50%, white);
 }
+.section--odd{
+	background-image: linear-gradient(to right, #367099, #367099 50%, white 50%, white);
+}
 
+ /*****************CONTAINER***************************/
 .container {
 	display: flex;
 	max-width: 1000px;
 	margin: 0 auto;
-	height: 100vh;
 	font-family: 'Lato', sans-serif;
 }
+.container--header {
+	height: 100vh;
+}
 
+ /*****************ASIDE******************************/
 .aside {
 	flex: none;
 	width: 300px;
 	background: #3B7BA7;
+}
+.section--odd .aside{
+	background-color: #367099;
 }
 
 .aside img {
@@ -26,6 +37,7 @@
 	border-radius: 50%;
 }
 
+/*****************MAIN******************************/
 .main {
 	flex: auto;
 	background-color: white;
@@ -34,6 +46,13 @@
 	
 .main .header{
 	font-family: 'Cinzel Decorative', cursive;
+}
+
+.main--odd{
+	color: #333;
+	line-height: 1.75;
+	font-size: 20px;
+	background-color: #f5f5f5;
 }
 
 .aside, .main {
@@ -60,14 +79,15 @@ h1 span:nth-child(2) {
 .main h2 {
 	color: #939393;
 }
-.cartouche{
+.admin{
 	display: flex;
 	position: absolute;
 	bottom:0;
-}
-table{
-	justify-content:space-between;
-	border-spacing: 15px;
-	border-top: 1px solid #939393;
 	width: 100%;
 }
+table{
+	text-align: left;
+	border-top: 1px solid #939393;
+	width: calc(100% - 100px);
+}
+
